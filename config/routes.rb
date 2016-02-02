@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'mcsubscribe/subscribe' => 'mcsubscribe#subscribe'
+  root 'mcsubscribe#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
