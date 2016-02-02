@@ -6,7 +6,7 @@ class McsubscribeController < ApplicationController
   def subscribe 
     email = params[:email][:address] 
     
-    if !email.blank
+    if !email.blank?
       
       begin
         @mc.lists.subscribe(@list_id, {'email' => email})
