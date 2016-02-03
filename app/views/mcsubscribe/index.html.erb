@@ -1,8 +1,12 @@
-<h2>Subscribe for Updates</h2>
-<p>Enter your email to subscribe for updates and information on new releases!</p>
+<div class="container">
 
-<%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
-  <%= email_field(:email, :address, {id: "email", placeholder: "Email"}) %>
-  <%= submit_tag "Subscribe" %>
-<% end %>
-<div id="response">Response will be displayed here</div>
+  <h2>Subscribe for Updates</h2>
+  <p>Enter your email to subscribe for updates and information on new releases!</p>
+  
+  <%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
+    <%= email_field(:email, :address, {id: "email", placeholder: "Email"}) %></br>
+    <%= submit_tag "Subscribe", class: "subscribe-btn" %>
+  <% end %>
+  <div id="response"></div>
+
+</div>
